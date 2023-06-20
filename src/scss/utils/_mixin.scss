@@ -1,11 +1,5 @@
 @use "./../utils/unit" as *;
 
-@mixin posCenter {
-  position:absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
 @mixin pos {
   position: absolute;
 }

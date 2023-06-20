@@ -6,7 +6,7 @@
   background: transparent;
   @include paddingX(16px);
   font-size: rem(14px);
-  border-radius: 4px;
+  border-radius: rem(4px);
  
   &--fill {
     background: $brown;
@@ -14,7 +14,7 @@
   }
   &--outline {
     color: $brown;
-    border: 1px solid curentColor;
+    border: 1px solid currentColor;
   }
 }
 
@@ -46,7 +46,7 @@
     &BarMiddle {
       @include posCenterY;
     }
-    &BarBottum {
+    &BarBottom {
       @include posBottomY;
     }
   }
