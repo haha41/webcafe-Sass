@@ -1,1 +1,50 @@
-// navigation.scss
+@use "./../utils" as *;
+
+// 메인 내비게이션
+.menu {
+  @include mobile {
+    @at-root .is--active &__list {
+      transform: none;
+    }
+
+    &__list {
+      //$color: #f0e68c;
+      //Sass에서는 hsla 후 번호 가능
+      //background: hsla($color, 0.5);
+      //background: hsla(#f0e68c, 0.5);
+      //background: rgba(240, 230, 140, 0.85);
+      background: $accent-opacity-color;
+      @include padding(20px);
+      width: 70vw;
+      height: 100vh;
+      position: fixed;
+      left: 0;
+      top: 0;
+      transform: translateX(-150%);
+    }
+
+    &__item {
+      border-bottom: 1px solid $black;
+    }
+  }
+
+  @include desktop {
+    // 배경색 잘리지 않도록
+    background: $brown;
+    @at-root .menu__list {
+      @include flexbox ($justify: space-between);
+      @include containerMax;
+      @include paddingX(4px);
+      @include paddingY(16px);
+      color: $white;
+      font-size: rem(18px);
+      font-weight: 700;
+    }
+  }
+
+  &__link {
+    // 클릭할 수 있는 면적 확보
+    display: block;
+    @include padding(16px);
+  }
+}

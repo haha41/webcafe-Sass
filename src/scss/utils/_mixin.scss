@@ -48,8 +48,8 @@
 }
 
 @mixin padding($spacing) {
-  @include paddingX;
-  @include paddingY;
+  @include paddingX($spacing);
+  @include paddingY($spacing);
 }
 
 @mixin paddingX($spacing) {
@@ -77,8 +77,8 @@
 }
 
 @mixin margin($spacing) {
-  @include marginX;
-  @include marginY;
+  @include marginX($spacing);
+  @include marginY($spacing);
 }
 
 @mixin autoMargin {
